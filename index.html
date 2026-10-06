@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditoría especializada · Conclusiones del trabajo · Profesor Sergio Tertusio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef3f1;
+    --ink: #14211e;
+    --muted: #4d5e58;
+    --paper: #fbfefc;
+    --line: #d3e0da;
+    --accent: #0c6b62;
+    --accent-ink: #f4fffc;
+    --chip: #e3f0eb;
+    --good: #14653d;
+    --goodbg: #e3f6eb;
+    --bad: #8a2e32;
+    --badbg: #fbeceb;
+    --note: #e7f3ef;
+    --shadow: 0 10px 28px rgba(16, 40, 36, 0.06);
+    --header: rgba(238, 243, 241, 0.94);
+    color-scheme: light;
+  }
+  html[data-theme="dark"] {
+    --bg: #101816;
+    --ink: #e8f3ef;
+    --muted: #b7c9c2;
+    --paper: #182421;
+    --line: #2c403a;
+    --accent: #7dcec2;
+    --accent-ink: #08211d;
+    --chip: #243530;
+    --good: #8edcb4;
+    --goodbg: #16352a;
+    --bad: #f0b4b0;
+    --badbg: #3a2222;
+    --note: #1c2c28;
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+    --header: rgba(16, 24, 22, 0.94);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; overflow-x: hidden; }
+  body {
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    font-size: 1.05rem;
+  }
+  button, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  .top {
+    position: sticky; top: 0; z-index: 30;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
+    padding: 10px 14px;
+    background: var(--header);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+  }
+  .brand {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    flex: 1 1 220px;
+    margin: 0;
+  }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn, .opt, .card, select.pick {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 12px;
+  }
+  .btn { min-height: 44px; padding: 8px 14px; }
+  .btn:hover, .card:hover { border-color: var(--accent); }
+  .btn.primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: transparent;
+    font-weight: 700;
+  }
+  .btn.ghost { background: transparent; }
+  .wrap { width: min(46rem, calc(100% - 28px)); margin: 0 auto; padding: 22px 0 64px; }
+  .kicker {
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+  h1.cover-prof {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 8vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin: 0 0 12px;
+  }
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.65rem, 4vw, 2.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+  }
+  h3 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.28rem;
+    margin: 1.15rem 0 0.35rem;
+  }
+  .lede { font-size: 1.12rem; margin-top: 0; }
+  .muted { color: var(--muted); }
+  .stack { display: grid; gap: 12px; margin-top: 18px; }
+  .card {
+    text-align: left;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    width: 100%;
+  }
+  .card b { display: block; font-size: 1.08rem; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 0.92rem; }
+  .fig { margin: 14px 0 18px; }
+  .fig svg {
+    width: 100%; height: auto; display: block;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .fig figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 6px; }
+  .note {
+    background: var(--note);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 0 12px 12px 0;
+    margin: 14px 0;
+  }
+  ul { padding-left: 1.15rem; }
+  li { margin: 0.28rem 0; }
+  p { overflow-wrap: anywhere; }
+  .bar { height: 8px; background: var(--chip); border-radius: 99px; overflow: hidden; margin-top: 8px; }
+  .bar span { display: block; height: 100%; background: var(--accent); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .opt {
+    display: block; width: 100%; text-align: left;
+    padding: 12px 14px; min-height: 48px; margin: 8px 0;
+  }
+  .opt.good, .item.good { border-color: var(--good); background: var(--goodbg); }
+  .opt.bad, .item.bad { border-color: var(--bad); background: var(--badbg); }
+  .opt:disabled { cursor: default; }
+  .fb { padding: 12px 14px; border-radius: 12px; margin-top: 8px; }
+  .fb.good { background: var(--goodbg); }
+  .fb.bad { background: var(--badbg); }
+  .item { border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin: 10px 0; background: var(--paper); }
+  select.pick { width: 100%; min-height: 44px; padding: 8px; margin-top: 6px; }
+  .modal {
+    position: fixed; inset: 0; background: rgba(10, 18, 16, 0.48);
+    display: grid; place-items: center; padding: 18px; z-index: 40;
+  }
+  .dialog { background: var(--paper); color: var(--ink); border-radius: 16px; padding: 18px; width: min(26rem, 100%); border: 1px solid var(--line); }
+  .score { font-family: "Source Serif 4", Georgia, serif; font-size: 3rem; margin: 0; letter-spacing: -0.04em; }
+  .miss { font-size: 0.95rem; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <p class="brand">Profesor Sergio Tertusio</p>
+  <div class="tools">
+    <button class="btn ghost" type="button" data-act="home">Menú</button>
+    <button class="btn ghost" type="button" data-act="theme">Tema</button>
+    <button class="btn ghost" type="button" data-act="reset">Reiniciar</button>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<script>
+const KEY = "stertusio-ae-u4-conclusiones-2026";
+const LESSONS = {
+  l1: {
+    n: "Lectura 1",
+    title: "Integrar los procedimientos",
+    cover: "union",
+    coverAlt: "Varios procedimientos se reúnen en una sola conclusión",
+    blurb: "Cómo se juntan, al cerrar el trabajo, los riesgos, las incorrecciones y la ayuda de internos o expertos.",
+    aim: "En la etapa de conclusiones el auditor ordena la evidencia para sostener su opinión. Esta lectura recorre las NIA que usa para integrar ese cierre.",
+    modules: [
+      {
+        title: "La opinión se arma al cerrar",
+        image: "juicio",
+        alt: "El juicio profesional se apoya en evidencia analizada",
+        blocks: [
+          { t: "p", v: "El objetivo de la lectura es conocer las NIA que se consultan en las conclusiones, para integrar los procedimientos y documentar la opinión." },
+          { t: "p", v: "Ahí el auditor interpreta los riesgos ya valorados y evalúa las incorrecciones, para medir su impacto antes de emitir el informe. También organiza la evidencia que va a sostener la opinión." },
+          { t: "p", v: "Si consultó a un experto o a auditoría interna, debe dejar dicho qué confianza tuvo en ese trabajo." },
+          { t: "h", v: "Qué aporta la NIA 200" },
+          { t: "p", v: "El párrafo 7 pide construir la opinión con conclusiones sacadas de la evidencia obtenida, analizadas y documentadas. El párrafo 9 recuerda que puede haber otras comunicaciones: a usuarios, a la dirección, a los responsables del gobierno o a terceros, según las NIA o la ley." },
+          { t: "p", v: "El juicio profesional sirve para llegar a esas conclusiones. Un ejemplo de la lectura es valorar si son razonables las estimaciones que hizo la dirección, que sigue siendo responsable de la información." },
+          { t: "note", v: "En asuntos complejos o controvertidos el auditor puede consultar dentro del equipo, con auditores externos o con expertos. La lectura pone el caso de confiar en auditoría interna para una toma física de inventarios: esa confianza tiene que verse en el informe." },
+          { t: "p", v: "Todo esto se sostiene en escepticismo, juicio, formación y ética. Sin esa base no hay evidencia de calidad suficiente para opinar." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "El equipo confió en auditoría interna para el recuento de inventarios. Según la lectura, ¿qué corresponde al cerrar?",
+          options: [
+            { text: "Dejar constancia, en el informe, de la confianza depositada en ese trabajo.", ok: true },
+            { text: "Omitirlo: la toma física no forma parte de las conclusiones.", ok: false },
+            { text: "Traspasar la opinión a auditoría interna, que ya hizo el recuento.", ok: false }
+          ],
+          why: "La NIA 200, en el ejemplo de la lectura, usa justamente ese caso: si se confía en el equipo de auditoría interna para la toma física, el informe tiene que manifestar esa confianza. La opinión no se transfiere."
+        }
+      },
+      {
+        title: "Responder a los riesgos ya valorados",
+        image: "respuesta",
+        alt: "Naturaleza, momento y extensión de las pruebas según el riesgo",
+        blocks: [
+          { t: "p", v: "La NIA 330 pide evidencia suficiente y adecuada sobre los riesgos valorados de incorrección material, con respuestas diseñadas para esos riesgos." },
+          { t: "p", v: "Al terminar los procedimientos, el auditor explica por qué valoró así el riesgo en las afirmaciones de la gerencia, para cada tipo de transacción, saldo e información a revelar. Esa explicación incluye:" },
+          { t: "ul", v: [
+            "Los hechos que muestran un posible riesgo material por las características de esa transacción o de ese saldo: es el riesgo inherente.",
+            "Al cierre del trabajo sobre el riesgo de control, una declaración de que se consideraron los controles relevantes y de que operan de manera efectiva.",
+            "Si hizo falta evidencia más persuasiva: procedimientos alternativos o adicionales sobre partidas o saldos concretos."
+          ] },
+          { t: "p", v: "La vía más directa es aplicar procedimientos cuya naturaleza, momento y extensión salgan de esos riesgos. Lo que se identificó al planificar define si las pruebas serán de cumplimiento, sustantivas o analíticas." },
+          { t: "note", v: "Para opinar se considera toda la evidencia relevante, tanto la que corrobora las afirmaciones de los estados como la que las contradice. Al final, la NIA 330 pide concluir si la evidencia obtenida es suficiente y adecuada." }
+        ],
+        activity: {
+          type: "match",
+          prompt: "Une cada pieza de la NIA 330 con lo que la lectura dice que es.",
+          pairs: [
+            ["Riesgo inherente", "Hechos de posible riesgo material por cómo es la transacción o el saldo."],
+            ["Riesgo de control", "Declarar que los controles relevantes se consideraron y operan."],
+            ["Evidencia más persuasiva", "Procedimientos alternativos o adicionales sobre partidas concretas."],
+            ["Opinión", "Mirar la evidencia que confirma y también la que contradice."]
+          ],
+          why: "La lectura separa el riesgo que nace de la partida, la conclusión sobre los controles, la evidencia extra cuando hace falta más seguridad, y la regla de no quedarse solo con lo que favorece a la gerencia."
+        }
+      },
+      {
+        title: "Incorrecciones y materialidad",
+        image: "material",
+        alt: "Las incorrecciones acumuladas se comparan con la materialidad",
+        blocks: [
+          { t: "p", v: "La NIA 450 trata el efecto de las incorrecciones encontradas. Si no se corrigieron en los estados, se proponen ajustes o reclasificaciones para incorporarlos. Eso se atiende en las conclusiones." },
+          { t: "p", v: "Hay que ver si la suma de lo acumulado se acerca o pasa la cifra de materialidad. Se retoma el cálculo de la planificación: la materialidad global, la usada para elegir partidas y la que decide si un ajuste entra o no a corregir los estados." },
+          { t: "p", v: "Si la empresa decide no incluirlos, la información puede dejar de ser razonable y la opinión puede llevar salvedades: el auditor no está del todo de acuerdo con lo presentado." },
+          { t: "h", v: "Si los ajustes no entraron" },
+          { t: "ul", v: [
+            "Ver si son materiales solos o sumados, por magnitud y naturaleza, y también frente a los estados en conjunto.",
+            "Ver el efecto de incorrecciones no corregidas de periodos anteriores, si las hay, sobre transacciones, saldos o revelaciones relevantes."
+          ] },
+          { t: "p", v: "Hay que comunicarlo a los responsables del gobierno: qué no se corrigió y qué efecto tiene, solo o en conjunto, sobre la opinión. El mensaje debe detallar esos ajustes. En esta etapa se pide que se corrijan los saldos incluyéndolos." },
+          { t: "note", v: "En las conclusiones quedan tres cosas: el importe por debajo del cual una incorrección es claramente insignificante; todas las incorrecciones acumuladas y si se corrigieron; y la conclusión de si lo no corregido es material, con su fundamento." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "La suma de ajustes no incluidos se acerca a la materialidad fijada en la planificación. La empresa no quiere registrarlos. ¿Qué camino describe la lectura?",
+          options: [
+            { text: "Puede hacer falta una opinión con salvedades, y hay que comunicarlo a los responsables del gobierno.", ok: true },
+            { text: "Se archivan los ajustes: por debajo del informe ya no importan.", ok: false },
+            { text: "Se cambia la materialidad de la planificación para que la suma deje de acercarse.", ok: false }
+          ],
+          why: "La NIA 450, según la lectura, compara lo acumulado con la materialidad ya calculada. Si no se incorpora y la información deja de ser razonable, la opinión puede llevar salvedades. Además hay que comunicarlo a quienes gobiernan la entidad y pedir la corrección."
+        }
+      },
+      {
+        title: "Internos y expertos",
+        image: "apoyo",
+        alt: "El auditor externo puede usar trabajo interno o de un experto sin ceder la opinión",
+        blocks: [
+          { t: "h", v: "NIA 610" },
+          { t: "p", v: "Muchas entidades tienen auditoría interna dentro del control y del gobierno. Su alcance, su autoridad y a quién rinde cuentas cambian según el tamaño, la estructura y lo que pida la dirección." },
+          { t: "p", v: "Si su posición, sus políticas y un enfoque sistemático respaldan objetividad y competencia, el auditor externo puede usar ese trabajo como complemento. Sigue siendo el único responsable de la opinión: usarlo no reduce esa responsabilidad. Tiene fe pública. El interno informa a la dirección sobre deficiencias de control o riesgos, para que se corrijan." },
+          { t: "p", v: "El externo puede apoyarse en lo interno para entender el negocio y su complejidad. El interno no es independiente de la empresa, así que su trabajo solo sostiene pruebas y procedimientos del externo." },
+          { t: "p", v: "El párrafo 22 pide leer los informes de auditoría interna del trabajo que se piensa usar, para conocer procedimientos y hallazgos. Sirven, entre otros, pruebas de eficacia de controles, sustantivos de juicio limitado, observación de recuentos, el seguimiento de transacciones en el sistema y pruebas de cumplimiento normativo." },
+          { t: "ul", v: [
+            "El externo se reserva los juicios grandes: valorar el riesgo de incorrección material, si las pruebas bastan, si cabe la hipótesis de empresa en funcionamiento, las estimaciones significativas y si las revelaciones y demás asuntos del informe son adecuados.",
+            "Puede preguntar al interno por posibles conductas fraudulentas. El interno también puede ayudar a reunir lo necesario para resolver excepciones en confirmaciones de clientes, proveedores, abogados u otras entidades."
+          ] },
+          { t: "h", v: "NIA 620" },
+          { t: "p", v: "El experto del auditor trabaja en un campo distinto de la contabilidad y la auditoría. La lectura menciona, entre otras materias, valorar instrumentos financieros complejos, terrenos, edificios, maquinaria, joyas, obras de arte, antigüedades, intangibles, combinaciones de negocios o activos deteriorados; cálculos actuariales de seguros o pensiones; reservas de petróleo y gas; pasivos ambientales y saneamiento; contratos y normas; y asuntos fiscales complejos." },
+          { t: "note", v: "La conclusión de la lectura: se integran los procedimientos para concluir sobre riesgos valorados y ajustes, y esos ajustes entran según la materialidad. Internos y expertos aportan si se mantienen el juicio, el escepticismo y la ética. Ese resumen es el que permite opinar." }
+        ],
+        activity: {
+          type: "classify",
+          prompt: "Según la lectura, ¿quién se queda con cada tarea?",
+          buckets: ["Auditor externo", "Puede apoyarse en otros"],
+          items: [
+            { id: "a", text: "La opinión de auditoría y la fe pública frente a los usuarios.", bucket: "Auditor externo" },
+            { id: "b", text: "Valorar el riesgo de incorrección material.", bucket: "Auditor externo" },
+            { id: "c", text: "Observar un recuento de existencias ya hecho por auditoría interna.", bucket: "Puede apoyarse en otros" },
+            { id: "d", text: "Estimar reservas de petróleo y gas.", bucket: "Puede apoyarse en otros" }
+          ],
+          why: "La NIA 610 deja la opinión y los juicios significativos en el auditor externo. El recuento observado por internos puede usarse como apoyo. La NIA 620 pone la estimación de reservas de petróleo y gas en un experto de otro campo."
+        }
+      }
+    ],
+    quiz: [
+      { q: "En las conclusiones, el auditor organiza la evidencia para sostener la opinión y, si usó a un experto o a auditoría interna, deja dicho qué confianza tuvo en ese trabajo.", options: ["Verdadero", "Falso"], a: 0, why: "Así abre la lectura: la evidencia se ordena como soporte de la opinión, y la confianza en consultas a expertos o a internos tiene que manifestarse." },
+      { q: "El párrafo 7 de la NIA 200, según la lectura, pide que la opinión se construya:", options: ["Solo con el borrador que entregue la gerencia.", "Con conclusiones sacadas de la evidencia obtenida, analizadas y documentadas.", "Con la opinión previa de auditoría interna."], a: 1, why: "El párrafo 7 exige conclusiones a partir de la evidencia, y que esas conclusiones estén analizadas y documentadas." },
+      { q: "El párrafo 9 limita la comunicación del auditor a la dirección de la empresa.", options: ["Verdadero", "Falso"], a: 1, why: "La lectura incluye también a los usuarios, a los responsables del gobierno y a terceros ajenos a la entidad, según las NIA o la norma aplicable." },
+      { q: "El objetivo de la NIA 330, en esta lectura, es:", options: ["Diseñar el informe de gobierno corporativo.", "Obtener evidencia suficiente y adecuada sobre los riesgos valorados, con respuestas adecuadas a esos riesgos.", "Sustituir la materialidad calculada en la planificación."], a: 1, why: "La norma, tal como la presenta la lectura, une evidencia suficiente y adecuada con el diseño y la aplicación de respuestas a los riesgos ya valorados." },
+      { q: "Para formarse una opinión, el auditor puede dejar de lado la evidencia que contradice las afirmaciones de los estados.", options: ["Verdadero", "Falso"], a: 1, why: "La NIA 330, en la lectura, pide considerar toda la evidencia relevante, corrobore o contradiga." },
+      { q: "Si los ajustes no se incluyen y la suma de incorrecciones se acerca o supera la materialidad, la lectura indica que puede corresponder:", options: ["Una opinión con salvedades.", "Eliminar la materialidad del archivo.", "Una carta solo de auditoría interna."], a: 0, why: "La NIA 450 describe ese caso: la información puede no ser razonable y la opinión expresa que no hay acuerdo completo con lo presentado." },
+      { q: "Las incorrecciones no corregidas deben comunicarse a los responsables del gobierno, con su efecto sobre la opinión.", options: ["Verdadero", "Falso"], a: 0, why: "La lectura lo toma de la NIA 450: la comunicación detalla los ajustes no incluidos y el efecto individual o global. En las conclusiones se pide que se corrijan los saldos." },
+      { q: "Si el auditor externo usa el trabajo de auditoría interna, su responsabilidad por la opinión disminuye.", options: ["Verdadero", "Falso"], a: 1, why: "La NIA 610 dice lo contrario: el externo sigue siendo el único responsable. El interno no es independiente y su trabajo solo apoya las pruebas." },
+      { q: "¿Cuál de estos juicios debe formarlo el auditor externo, según la lectura?", options: ["La valoración del riesgo de incorrección material.", "La redacción del reglamento interno de la empresa.", "La fijación de precios de venta al público."], a: 0, why: "Está en la lista de juicios significativos de la NIA 610, junto con la suficiencia de las pruebas, la empresa en funcionamiento, las estimaciones y las revelaciones." },
+      { q: "Según la NIA 620, el experto del auditor actúa en un campo distinto de la contabilidad y la auditoría. Un ejemplo de la lectura es:", options: ["El cálculo actuarial de pasivos por seguros o por planes de pensiones.", "Firmar la opinión en lugar del auditor.", "Archivar los papeles de trabajo."], a: 0, why: "La lectura incluye ese cálculo actuarial, junto con valoraciones, reservas de petróleo y gas, pasivos ambientales, contratos y asuntos fiscales complejos." }
+    ]
+  },
+  l2: {
+    n: "Lectura 2",
+    title: "Hallazgos, riesgos y controles",
+    cover: "hallazgo",
+    coverAlt: "Un hallazgo reúne condición, criterio, causa y efecto",
+    blurb: "Cómo se redacta un hallazgo y cómo se resume, al final, la matriz de riesgos y controles.",
+    aim: "Después de las conclusiones se redactan las notas de control interno y se arma el resumen de riesgos y controles. Esta lectura ordena esa comunicación.",
+    modules: [
+      {
+        title: "Qué es un hallazgo y a quién se dice",
+        image: "canales",
+        alt: "El hallazgo se conversa, se presenta al comité o se escribe en una carta",
+        blocks: [
+          { t: "p", v: "Un hallazgo es un evento con el que el auditor muestra el incumplimiento de una norma, de un control, de una política contable o de otro lineamiento, y con ello la posibilidad de una incorrección material. De ahí sale una recomendación, una acción de mejora o incluso un ajuste." },
+          { t: "p", v: "Se comunica a la gerencia para que pueda corregir. Si la corrección llega a tiempo, se verifica antes del informe final. Esas notas recogen deficiencias de cumplimiento, de reconocimiento, de medición o de revelación." },
+          { t: "h", v: "Canales que nombra la lectura" },
+          { t: "ul", v: [
+            "Conversación directa entre quien dirige la auditoría y el responsable en la empresa, para acordar acciones.",
+            "Presentación al Comité de Auditoría y a la dirección: hallazgos, recomendaciones y seguimiento. Los internos participan siempre; los externos, cuando los invitan.",
+            "Informe de control interno, o carta a la gerencia.",
+            "Informe de auditoría según el uso y el destinatario, con las NIA que correspondan."
+          ] },
+          { t: "p", v: "Puede haber error o fraude que pase desapercibido. Aun así, la conclusión puede extenderse a todo el rubro solo si el muestreo fue adecuado. Un hallazgo bien redactado resume el trabajo." },
+          { t: "note", v: "Tres definiciones que cita la lectura: para la ISO 9000 (2000), es el resultado de evaluar la evidencia frente a los criterios. Para la Contraloría de Colombia (1999), es un hecho relevante al comparar lo hallado con el deber ser, más causas y efectos. Restrepo (2018), con la Contraloría de Ecuador, lo ve como una deficiencia importante que puede dañar la capacidad de registrar, procesar, resumir y reportar información fiable." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "¿Quién tiene participación permanente en el Comité de Auditoría, según la lectura?",
+          options: [
+            { text: "Los auditores internos. Los externos asisten si hay una invitación planificada.", ok: true },
+            { text: "Solo los auditores externos, porque tienen fe pública.", ok: false },
+            { text: "Ninguno de los dos: el comité se entera por la carta a la gerencia.", ok: false }
+          ],
+          why: "La lectura separa los canales. En el Comité, la participación permanente es de auditoría interna. La externa entra por invitación. La carta a la gerencia es otro canal, no el único."
+        }
+      },
+      {
+        title: "Condición, criterio, causa y efecto",
+        image: "cuatro",
+        alt: "Cuatro piezas del hallazgo antes de recomendar",
+        blocks: [
+          { t: "p", v: "La Contraloría General de la República Bolivariana de Venezuela (2015) pide los cuatro elementos, sostenidos con evidencia necesaria, suficiente y pertinente. Si la operación contradice una norma, eso alimenta la condición y el criterio." },
+          { t: "h", v: "Condición" },
+          { t: "p", v: "Es la situación actual: una descripción objetiva e imparcial de la desviación. Se escribe en lenguaje técnico, con cargos y no con nombres, para no personalizar el hecho." },
+          { t: "h", v: "Criterio" },
+          { t: "p", v: "Es el deber ser: la norma legal, técnica o los principios de general aceptación contra los que se comparan los hechos. El marco de referencia reúne principios, procedimientos y guías. Conviene citar número o nombre, y el artículo o parágrafo." },
+          { t: "h", v: "Causa" },
+          { t: "p", v: "Es el motivo del incumplimiento. Explica por qué pasó lo descrito en la condición y si el hecho es aislado o se repite. Puede haber límites de recursos, o desconocimiento u omisión de la norma. Esa descripción ayuda a redactar la recomendación." },
+          { t: "h", v: "Efecto" },
+          { t: "p", v: "Es el impacto, en el proceso o en toda la empresa. En una auditoría financiera se mira si afecta solo la partida o si, por su importancia relativa, pesa en el conjunto de los estados. También se asocia a riesgos que podrían hacerse realidad y a objetivos que dejarían de cumplirse." },
+          { t: "note", v: "Medir el efecto ayuda a que el personal trabaje con la norma y evita costos de reproceso. La lectura pone como ejemplo tener que contratar servicios adicionales para aplicar las mejoras." }
+        ],
+        activity: {
+          type: "classify",
+          prompt: "Coloca cada frase en el elemento del hallazgo que describe la lectura.",
+          buckets: ["Condición", "Criterio", "Causa", "Efecto"],
+          items: [
+            { id: "a", text: "Lo que el auditor encontró, dicho sin nombres de personas.", bucket: "Condición" },
+            { id: "b", text: "La norma o el principio con el que se compara ese hecho.", bucket: "Criterio" },
+            { id: "c", text: "Por qué ocurrió, y si fue un caso aislado o reiterado.", bucket: "Causa" },
+            { id: "d", text: "El impacto en la partida o en los estados, según la importancia relativa.", bucket: "Efecto" }
+          ],
+          why: "La lectura arma el hallazgo en ese orden de ideas: situación actual, deber ser, motivo e impacto. La recomendación viene después, cuando los cuatro ya están escritos."
+        }
+      },
+      {
+        title: "Recomendar y las tres líneas",
+        image: "lineas",
+        alt: "Primera línea en los procesos, segunda en la contraloría, tercera en auditoría interna",
+        blocks: [
+          { t: "p", v: "La recomendación abre el plan de acción que acuerdan auditor y empresa. Va dirigida a un responsable, con un plazo, y después se le hace seguimiento." },
+          { t: "p", v: "Morón (2020), citado en la lectura, pide redactarla para corregir la condición y así cumplir el criterio y eliminar el efecto. También pide mirar el costo frente al beneficio, ajustarla a la realidad de esa organización y escribirla de forma concreta, precisa y factible." },
+          { t: "p", v: "El auditor interno da seguimiento con más frecuencia. El externo lo retoma en la visita siguiente y ve si el hallazgo volvió o ya se resolvió." },
+          { t: "h", v: "Modelo de las tres líneas" },
+          { t: "p", v: "El Instituto de Auditores Internos (2020) lo propone para aclarar estructuras y procesos que ayuden a lograr objetivos, con gobierno y gestión de riesgos. Aunque nace en auditoría interna, el externo lo usa porque es base del control." },
+          { t: "ul", v: [
+            "Primera línea: los responsables de los procesos diseñan los controles y definen cada cuánto se aplican.",
+            "Segunda línea: instancias de contraloría, como consultoría legal, seguridad industrial o control de pérdidas, que vigilan que esos controles funcionen.",
+            "Tercera línea: auditoría interna, que evalúa si los controles vigentes son efectivos.",
+            "La auditoría externa no es una de las tres líneas: entra como proveedor de aseguramiento externo y mira si la empresa identifica y gestiona los riesgos."
+          ] }
+        ],
+        activity: {
+          type: "match",
+          prompt: "¿A qué línea, o a qué función, corresponde cada tarea?",
+          pairs: [
+            ["Primera línea", "Diseñar los controles del proceso y su periodicidad."],
+            ["Segunda línea", "Vigilar, desde una contraloría, que el control se aplique."],
+            ["Tercera línea", "Evaluar si los controles vigentes son efectivos."],
+            ["Auditoría externa", "Aseguramiento externo: ver si los riesgos se identifican y se gestionan."]
+          ],
+          why: "El modelo del IAI (2020), en la lectura, deja la operación en la primera línea, la vigilancia especializada en la segunda y la evaluación independiente interna en la tercera. El externo observa el conjunto desde fuera."
+        }
+      },
+      {
+        title: "La matriz de riesgos y controles",
+        image: "matriz",
+        alt: "Probabilidad por impacto da una severidad alta, media o baja",
+        blocks: [
+          { t: "p", v: "Morón (2020) propone una matriz para el resumen. El riesgo se reconoce en la planificación global; la matriz se completa al concluir, cuando ya se pueden definir las respuestas." },
+          { t: "h", v: "Proceso y riesgo inherente" },
+          { t: "p", v: "Cada riesgo se ata a un proceso: medular o clave (ventas, compras, mercadeo, logística, investigación y desarrollo), estratégico (planificación, auditoría interna, calidad, riesgos corporativos, responsabilidad social) o de soporte (legal, financiero, seguridad, talento humano, mantenimiento, tecnología)." },
+          { t: "p", v: "El riesgo inherente es el de la actividad sin contar todavía los controles. Auditool (2015) lo liga a la exposición y a un golpe que afecte rentabilidad y capital. En la matriz se anotan la descripción, los procesos que impacta, si el origen es interno o externo, si es recurrente o nuevo, y el tipo." },
+          { t: "ul", v: [
+            "Tipos de la lectura: operacionales, estratégicos, financieros, de fraude, de cumplimiento y reputacionales.",
+            "Si el factor es externo, puede no haber un control que lo mitigue y caber transferirlo. Si es interno, la empresa diseña controles."
+          ] },
+          { t: "p", v: "Probabilidad e impacto, según la ISO 31000 (2018), suelen puntuarse de 1 a 5. La severidad es el producto. Alto: de 18 a 25. Medio: de 9 a 17. Bajo: de 1 a 8." },
+          { t: "h", v: "Control, residual y plan" },
+          { t: "p", v: "De cada control se dicen la descripción, el responsable y su cargo, la frecuencia y el tipo: preventivo, detectivo o correctivo (Estupiñán Gaitán, 2021). Puede ser manual, automático o semiautomático. A más tecnología, más confianza: lo manual se prueba en detalle; lo automático, con un recorrido o una simulación. También se lista la norma que lo documenta." },
+          { t: "p", v: "El riesgo residual es el que sigue después de tratar el inherente. Se vuelve a medir con la misma severidad. El plan de acción, acordado con los responsables, elige una respuesta: aceptar, evitar o mitigar. Lleva responsable, fecha de inicio, estatus y fecha de fin." },
+          { t: "note", v: "Aceptar es registrarlo y no actuar hasta que ocurra. Evitar es modificar o eliminar el proceso cuando el impacto es alto; el ejemplo de la lectura es cuidar las obligaciones fiscales para no caer en sanciones. Mitigar es bajar el impacto o la probabilidad con controles, de modo que si ocurre se pueda subsanar." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "Probabilidad 5 e impacto 4. ¿Cómo clasifica la lectura esa severidad?",
+          options: [
+            { text: "Alta: el producto es 20 y el rango alto va de 18 a 25.", ok: true },
+            { text: "Media: todo lo que pasa de 9 es medio.", ok: false },
+            { text: "Baja: porque el impacto no llegó a 5.", ok: false }
+          ],
+          why: "La severidad es probabilidad por impacto. 5 por 4 es 20. La lectura pone el riesgo alto entre 18 y 25, el medio entre 9 y 17 y el bajo entre 1 y 8."
+        }
+      }
+    ],
+    quiz: [
+      { q: "Para la ISO 9000 (2000), citada en la lectura, un hallazgo es el resultado de evaluar la evidencia de auditoría frente a los criterios.", options: ["Verdadero", "Falso"], a: 0, why: "Esa es una de las tres definiciones que recoge la lectura, junto con las de las contralorías de Colombia y de Ecuador." },
+      { q: "Al describir la condición, la lectura pide:", options: ["Nombrar a las personas responsables del error.", "Describir la situación actual con cargos, no con nombres, en lenguaje técnico.", "Copiar solo el artículo de la norma, sin el hecho."], a: 1, why: "La condición es lo encontrado. Se impersonaliza: cargos o posiciones, no nombres. La norma corresponde al criterio, no a la condición." },
+      { q: "El criterio es el deber ser: la norma o el principio contra el que se comparan los hechos.", options: ["Verdadero", "Falso"], a: 0, why: "Así lo definen la CGRBV (2015) y el apartado de marco de referencia. Conviene citar número, nombre y el artículo o parágrafo." },
+      { q: "La causa, según la lectura, debe indicar:", options: ["Solo el monto del ajuste contable.", "Por qué ocurrió el hecho y si es aislado o recurrente.", "El nombre comercial de la empresa."], a: 1, why: "Morón (2020) y la CGRBV describen la causa como el motivo. Conviene decir si se repite, porque de ahí salen las recomendaciones." },
+      { q: "Una recomendación se redacta antes de conocer la condición, para ahorrar tiempo.", options: ["Verdadero", "Falso"], a: 1, why: "La lectura pide describir antes condición, criterio, causa y efecto. La recomendación corrige la condición, cumple el criterio y busca eliminar el efecto." },
+      { q: "En el Comité de Auditoría, según la lectura:", options: ["Los internos participan de forma permanente y los externos asisten por invitación.", "Solo entran los externos.", "No se presentan hallazgos: eso va únicamente en el informe de estados."], a: 0, why: "Es uno de los canales de comunicación. Ahí se informan hallazgos, recomendaciones y el seguimiento de lo acordado." },
+      { q: "En el modelo de las tres líneas, auditoría interna es la tercera línea y auditoría externa es un aseguramiento externo, no una de las tres.", options: ["Verdadero", "Falso"], a: 0, why: "La lectura ubica a los dueños del proceso en la primera, a las contralorías en la segunda y a auditoría interna en la tercera. El externo evalúa desde fuera si los riesgos se identifican y se gestionan." },
+      { q: "Una severidad de 12 puntos, con la escala de la lectura, es:", options: ["Baja.", "Media.", "Alta."], a: 1, why: "Medio va de 9 a 17. Alto empieza en 18 y bajo llega hasta 8. La severidad es probabilidad por impacto, ambas de 1 a 5." },
+      { q: "El riesgo residual desaparece en cuanto se diseña un control.", options: ["Verdadero", "Falso"], a: 1, why: "ISOTool, en la lectura, lo define como el que persiste después de tratar el riesgo inherente. Por eso se vuelve a medir y se le hace seguimiento." },
+      { q: "Cuidar el cumplimiento fiscal para no incurrir en multas es, en el ejemplo de la lectura, una estrategia de:", options: ["Aceptar el riesgo y no hacer nada.", "Evitar el riesgo, modificando la forma de trabajar el proceso.", "Transferir el informe al auditor interno."], a: 1, why: "Evitar sirve cuando el impacto es alto y se puede modificar o eliminar el proceso que lo origina. Aceptar sería registrarlo sin actuar. Mitigar sería bajar el daño si igual ocurre." }
+    ]
+  },
+  l3: {
+    n: "Lectura 3",
+    title: "Cerrar las pruebas",
+    cover: "cierre",
+    coverAlt: "Las pruebas se resumen antes de opinar",
+    blurb: "La matriz de eficacia, los ajustes y las reclasificaciones, y el análisis de tendencias.",
+    aim: "Antes de opinar, el auditor resume las pruebas, propone lo que hay que corregir o reclasificar y lee las tendencias de los saldos.",
+    modules: [
+      {
+        title: "La matriz de eficacia operativa",
+        image: "eficacia",
+        alt: "Una matriz resume prueba, muestra, atributos y conclusión",
+        blocks: [
+          { t: "p", v: "Antes de opinar hay que tener las conclusiones del trabajo, de forma ordenada. La documentación resume hallazgos, notas de control interno, riesgos a seguir y la lista de ajustes y reclasificaciones, más lo que haya que mejorar en otras áreas." },
+          { t: "p", v: "La matriz de eficacia operativa sirve al auditor interno y al externo para dejar escritas las pruebas. La NIA 500, en la lectura, diseña las de cumplimiento para ver si los controles preventivos, detectivos y correctivos atienden errores o incorrecciones en las aseveraciones." },
+          { t: "p", v: "Hay tres tipos de prueba: de cumplimiento o de controles, sustantivas sobre las cifras, y analíticas. La matriz resume cada una. Incluye, entre otros datos:" },
+          { t: "ul", v: [
+            "Nombre de la prueba y su objetivo.",
+            "Controles clave, basados en procedimientos del proceso o en normas y regulaciones.",
+            "Tamaño de la población, por ejemplo facturas, compras o pagos.",
+            "Tamaño de la muestra, la técnica y el detalle de las partidas.",
+            "El programa aplicado, las marcas de auditoría y los atributos revisados.",
+            "La conclusión: si los controles se cumplen y si las cifras van con el marco. Pueden valorarse altos, medios, bajos, o concluirse que no existen.",
+            "La hoja resumen de los hallazgos."
+          ] },
+          { t: "note", v: "Auditool (2016) llama atributos a las condiciones que muestran si el control funcionó, y desviaciones a las que muestran que no. Los sustantivos, solos, no prueban la eficiencia de los controles; sí ayudan a ver si el reconocimiento y la medición son adecuados. Hacen falta las dos familias de pruebas. Las analíticas también entran en la matriz: comparan un periodo con el anterior y buscan la causa del cambio." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "El auditor solo hizo pruebas sustantivas de cifras y quiere dar por eficiente el control. ¿Qué dice la lectura?",
+          options: [
+            { text: "No alcanza: los sustantivos no prueban por sí solos la eficiencia del control. También hacen falta pruebas de controles.", ok: true },
+            { text: "Alcanza: la cifra correcta demuestra que el control funcionó.", ok: false },
+            { text: "Alcanza si la muestra fue el 100 % de las facturas.", ok: false }
+          ],
+          why: "La lectura es explícita: los procedimientos sustantivos no dan, por sí solos, evidencia suficiente y adecuada sobre la eficiencia de los controles. Sirven para el reconocimiento y la medición. Por eso se combinan con pruebas de controles."
+        }
+      },
+      {
+        title: "Ajuste no es lo mismo que reclasificar",
+        image: "asientos",
+        alt: "Un ajuste cruza balance y resultados; una reclasificación se queda en un mismo estado",
+        blocks: [
+          { t: "p", v: "Las pruebas pueden llevar a proponer ajustes y reclasificaciones para que la información cumpla la medición inicial y posterior del marco aplicable." },
+          { t: "h", v: "Asientos de ajuste" },
+          { t: "p", v: "Bastidas (2018) los define como correcciones que se incluyen al final, por inconsistencias en algunas cuentas, para que el saldo quede bien medido. La lectura menciona, como ejemplos de esas cuentas, inventarios, efectivo, propiedades, planta y equipo, y en general las cuentas de los estados." },
+          { t: "p", v: "Zapata Sánchez (2021) los describe como registros en el libro mayor para corregir saldos que no son razonables. Unos se hacen al cerrar el ejercicio y otros cada mes. El auditor los propone al terminar, para que entren antes del informe." },
+          { t: "p", v: "Nacen de un error o de una omisión al aplicar la política contable, o de no haberla considerado. La NIC 8, citada en la lectura, pide corregir desde el origen. Eso puede modificar también la información del año anterior, para que se pueda comparar." },
+          { t: "p", v: "Audinfor (2020) precisa que, si la importancia relativa lo exige, el ajuste entra en los libros para que el saldo refleje la situación a una fecha. Un ajuste modifica una cuenta real, del estado de situación financiera, contra una cuenta nominal, de resultados." },
+          { t: "h", v: "Asientos de reclasificación" },
+          { t: "p", v: "Audinfor (2020) dice que no afectan el resultado: o mueven solo cuentas de balance, o mueven solo cuentas de resultados. No mezclan reales con nominales. Sirven, por ejemplo, para pasar un activo o un pasivo de corriente a no corriente, o un ingreso ordinario a otros ingresos." },
+          { t: "note", v: "La diferencia práctica de la lectura: el ajuste cruza balance y resultados para corregir una medición. La reclasificación deja la partida en el mismo tipo de estado, en el lugar que le corresponde." }
+        ],
+        activity: {
+          type: "classify",
+          prompt: "Según la lectura, ¿esto es un ajuste o una reclasificación?",
+          buckets: ["Ajuste", "Reclasificación"],
+          items: [
+            { id: "a", text: "Corregir un saldo que quedó mal por un error al aplicar la política contable, tocando una cuenta real y una de resultados.", bucket: "Ajuste" },
+            { id: "b", text: "Pasar una partida de activo corriente a activo no corriente.", bucket: "Reclasificación" },
+            { id: "c", text: "Pasar un ingreso ordinario a la cuenta de otros ingresos.", bucket: "Reclasificación" },
+            { id: "d", text: "Una omisión que, por la NIC 8, debe corregirse desde el momento en que se originó.", bucket: "Ajuste" }
+          ],
+          why: "El ajuste corrige una medición y puede cruzar balance y resultados, incluso con efecto en el año anterior si la NIC 8 lo pide. La reclasificación no cambia el resultado: reubica la partida dentro del balance o dentro de resultados."
+        }
+      },
+      {
+        title: "Tendencias y el tipo de opinión",
+        image: "tendencia",
+        alt: "Los saldos de dos periodos se comparan para ver si el movimiento es habitual",
+        blocks: [
+          { t: "p", v: "Como valor agregado, el auditor analiza tendencias: cómo se comportan los saldos y si ese comportamiento tiene una explicación." },
+          { t: "p", v: "Una baja puede relacionarse, en los ejemplos de la lectura, con una recesión, con un cambio de gustos o de moda, o con precios altos. Una suba puede venir de productos nuevos, de mejor calidad y mercadeo, de campañas o de promociones." },
+          { t: "p", v: "Si la variación es inusual o el porcentaje es considerable, hay que revisarla y ver si igual corresponde al curso normal del negocio. El análisis muestra si los saldos siguen su comportamiento natural o histórico." },
+          { t: "p", v: "Un indicador que la lectura destaca es el de crecimiento de ventas: compara los ingresos de este año con los del anterior, para ver si crecieron o bajaron y después estudiar las causas. Pueden usarse tantos indicadores como hagan falta en las áreas de mayor importancia relativa." },
+          { t: "h", v: "Qué cierra el trabajo" },
+          { t: "p", v: "Antes del informe se recopilan las conclusiones de cada prueba. Deben decir si los controles fueron eficientes y si se cumplió el marco normativo." },
+          { t: "note", v: "De eso depende si la opinión queda limpia, con salvedades, con negación o con abstención. La lectura llama opinión modificada a esta última. Las tendencias ayudan a detectar movimientos inusuales antes de opinar." }
+        ],
+        activity: {
+          type: "scenario",
+          prompt: "Las ventas cayeron fuerte frente al año anterior. ¿Para qué sirve, en la lectura, el análisis de tendencias?",
+          options: [
+            { text: "Para revisar si esa variación tiene una causa explicable en el curso normal del negocio, antes de opinar.", ok: true },
+            { text: "Para reemplazar la matriz de eficacia operativa.", ok: false },
+            { text: "Para convertir automáticamente la caída en un asiento de reclasificación.", ok: false }
+          ],
+          why: "La lectura presenta el análisis como valor agregado: se comparan periodos, se buscan causas —recesión, gustos, precios, productos nuevos— y se atienden los movimientos inusuales antes de emitir la opinión. No sustituye las pruebas ni reclasifica solo por la cifra."
+        }
+      }
+    ],
+    quiz: [
+      { q: "La matriz de eficacia operativa documenta las pruebas de cumplimiento, las sustantivas y las analíticas.", options: ["Verdadero", "Falso"], a: 0, why: "La lectura dice que las pruebas son de esos tres tipos y que la matriz resume cada una, con objetivo, controles, población, muestra, programa, marcas y conclusión." },
+      { q: "Los procedimientos sustantivos, por sí solos, alcanzan para concluir que los controles son eficientes.", options: ["Verdadero", "Falso"], a: 1, why: "La lectura dice que no dan evidencia suficiente sobre la eficiencia de los controles. Sirven para el reconocimiento y la medición. Hacen falta también pruebas de controles." },
+      { q: "En la matriz, la conclusión sobre los controles puede ser que son altos, medios, bajos o que no existen.", options: ["Verdadero", "Falso"], a: 0, why: "Está entre los datos de la matriz: se concluye si los controles se cumplen y las cifras van con el marco, y se les asigna uno de esos niveles, incluida la ausencia de controles." },
+      { q: "Según Bastidas (2018) y la lectura, un asiento de ajuste:", options: ["Reubica una partida dentro del mismo estado, sin tocar el resultado.", "Corrige información por inconsistencias, para que el saldo quede bien medido.", "Es solo un gráfico de tendencias."], a: 1, why: "El ajuste corrige cuentas al final de la auditoría. La reubicación sin afectar el resultado es la reclasificación, no el ajuste." },
+      { q: "La NIC 8, en la lectura, pide corregir el error o la omisión desde que se originó, y eso puede cambiar también la información del año anterior.", options: ["Verdadero", "Falso"], a: 0, why: "La corrección es retroactiva. La lectura lo liga a la comparabilidad: si hace falta, se modifica la información del periodo anterior." },
+      { q: "Pasar un ingreso ordinario a otros ingresos, sin mezclar cuentas de balance con cuentas de resultados, es:", options: ["Un asiento de ajuste.", "Un asiento de reclasificación.", "Una prueba de cumplimiento."], a: 1, why: "Audinfor (2020), en la lectura, define la reclasificación como un movimiento que no afecta el resultado: solo balance o solo resultados. Ese ejemplo está en el texto." },
+      { q: "Un ajuste, según la lectura, modifica una cuenta real contra una cuenta nominal.", options: ["Verdadero", "Falso"], a: 0, why: "Esa es la distinción: el ajuste cruza el estado de situación financiera y los resultados. La reclasificación no hace ese cruce." },
+      { q: "El índice de crecimiento de ventas, en la lectura, sirve para:", options: ["Comparar los ingresos de este año con los del anterior y luego analizar las causas.", "Calcular la materialidad global de la planificación.", "Sustituir la carta a la gerencia."], a: 0, why: "Es el indicador que la lectura destaca dentro del análisis de tendencias. El resultado dice si los ingresos crecieron o bajaron; después se estudian las causas." },
+      { q: "Una caída de saldos explicada por recesión o por un cambio en los gustos de los clientes es, en los ejemplos de la lectura, materia del análisis de tendencias.", options: ["Verdadero", "Falso"], a: 0, why: "La lectura enumera esas causas de disminución, y también causas de aumento como productos nuevos, calidad, campañas y promociones." },
+      { q: "Antes del informe, las conclusiones de las pruebas permiten ver si la opinión será:", options: ["Limpia, con salvedades, con negación o con abstención.", "Solo un memorando interno, sin opinión.", "Siempre limpia si hubo matriz."], a: 0, why: "La lectura cierra con esas cuatro posibilidades, según la eficiencia de los controles y el cumplimiento del marco. A la abstención la llama también opinión modificada." }
+    ]
+  }
+};
+
+const ORDER = ["l1", "l2", "l3"];
+
+function fresh() {
+  const readings = {};
+  ORDER.forEach((id) => { readings[id] = { modules: {}, work: {}, quiz: null }; });
+  return { theme: "light", view: { name: "home" }, readings };
+}
+let state = fresh();
+
+function load() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (!raw || !raw.readings) return;
+    state.theme = raw.theme === "dark" ? "dark" : "light";
+    state.view = raw.view && raw.view.name ? raw.view : { name: "home" };
+    ORDER.forEach((id) => {
+      const r = raw.readings[id] || {};
+      state.readings[id] = { modules: r.modules || {}, work: r.work || {}, quiz: r.quiz || null };
+    });
+  } catch (e) { state = fresh(); }
+}
+function save() {
+  localStorage.setItem(KEY, JSON.stringify({ theme: state.theme, view: state.view, readings: state.readings }));
+}
+function esc(s) {
+  const map = {"&": "\u0026amp;", "<": "\u0026lt;", ">": "\u0026gt;", '"': "\u0026quot;", "'": "\u0026#39;"};
+  return String(s).replace(/[&<>"']/g, (c) => map[c]);
+}
+function applyTheme() {
+  document.documentElement.dataset.theme = state.theme;
+  const b = document.querySelector("[data-act='theme']");
+  if (b) b.textContent = state.theme === "dark" ? "Claro" : "Oscuro";
+}
+function svgText(x, y, str, size) {
+  return `<text x="${x}" y="${y}" text-anchor="middle" font-size="${size || 16}" fill="var(--ink)" font-family="Source Sans 3, sans-serif">${esc(str)}</text>`;
+}
+function illustration(kind, alt) {
+  const common = `<style>
+    .s { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+    .f { fill: var(--chip); stroke: var(--ink); stroke-width: 2; }
+    .a { fill: var(--accent); }
+    .p { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
+  </style>`;
+  let body = "";
+  if (kind === "union") {
+    body = `${common}
+      <rect x="70" y="70" width="140" height="90" rx="12" class="f"/>
+      <rect x="250" y="48" width="140" height="90" rx="12" class="p"/>
+      <rect x="430" y="70" width="140" height="90" rx="12" class="f"/>
+      <path d="M140 160 L250 210 H390 L500 160" class="s"/>
+      <rect x="210" y="188" width="220" height="64" rx="14" class="a"/>
+      ${svgText(140, 122, "Riesgos", 18)}
+      ${svgText(320, 100, "Ajustes", 18)}
+      ${svgText(500, 122, "Apoyos", 18)}
+      ${svgText(320, 226, "Conclusión", 18)}`;
+  } else if (kind === "juicio") {
+    body = `${common}
+      <rect x="78" y="46" width="200" height="188" rx="12" class="p"/>
+      <path d="M98 86 H258 M98 118 H240 M98 150 H220" class="s"/>
+      <circle cx="430" cy="140" r="78" class="f"/>
+      <path d="M392 142 L418 168 L472 108" class="s" stroke-width="6"/>
+      ${svgText(178, 210, "Evidencia", 16)}
+      ${svgText(430, 246, "Juicio", 16)}`;
+  } else if (kind === "respuesta") {
+    body = `${common}
+      <rect x="48" y="78" width="160" height="120" rx="14" class="f"/>
+      <rect x="240" y="78" width="160" height="120" rx="14" class="p"/>
+      <rect x="432" y="78" width="160" height="120" rx="14" class="f"/>
+      ${svgText(128, 132, "Naturaleza", 16)}
+      ${svgText(320, 132, "Momento", 16)}
+      ${svgText(512, 132, "Extensión", 16)}
+      ${svgText(320, 248, "Según el riesgo valorado", 16)}`;
+  } else if (kind === "material") {
+    body = `${common}
+      <line x1="80" y1="200" x2="560" y2="200" class="s"/>
+      <rect x="120" y="150" width="70" height="50" class="f"/>
+      <rect x="200" y="120" width="70" height="80" class="p"/>
+      <rect x="280" y="90" width="70" height="110" class="f"/>
+      <line x1="80" y1="78" x2="560" y2="78" class="s" stroke="var(--accent)" stroke-width="4"/>
+      ${svgText(320, 64, "Materialidad", 16)}
+      ${svgText(320, 236, "Incorrecciones acumuladas", 16)}`;
+  } else if (kind === "apoyo") {
+    body = `${common}
+      <circle cx="160" cy="110" r="36" class="a"/>
+      <rect x="112" y="156" width="96" height="70" rx="10" class="f"/>
+      <circle cx="480" cy="110" r="36" class="f"/>
+      <rect x="432" y="156" width="96" height="70" rx="10" class="p"/>
+      <path d="M210 140 H400" class="s"/>
+      ${svgText(160, 250, "Externo", 16)}
+      ${svgText(480, 250, "Interno o experto", 16)}`;
+  } else if (kind === "hallazgo") {
+    body = `${common}
+      <rect x="150" y="36" width="340" height="210" rx="16" class="p"/>
+      <rect x="178" y="62" width="284" height="36" rx="8" class="a"/>
+      <rect x="178" y="110" width="284" height="28" rx="8" class="f"/>
+      <rect x="178" y="148" width="284" height="28" rx="8" class="f"/>
+      <rect x="178" y="186" width="284" height="28" rx="8" class="f"/>
+      ${svgText(320, 86, "Hallazgo", 16)}`;
+  } else if (kind === "canales") {
+    body = `${common}
+      <rect x="46" y="70" width="170" height="110" rx="14" class="f"/>
+      <rect x="236" y="70" width="170" height="110" rx="14" class="p"/>
+      <rect x="426" y="70" width="170" height="110" rx="14" class="f"/>
+      ${svgText(131, 128, "Conversar", 16)}
+      ${svgText(321, 128, "Comité", 16)}
+      ${svgText(511, 128, "Carta", 16)}`;
+  } else if (kind === "cuatro") {
+    body = `${common}
+      <rect x="36" y="80" width="130" height="100" rx="12" class="a"/>
+      <rect x="182" y="80" width="130" height="100" rx="12" class="f"/>
+      <rect x="328" y="80" width="130" height="100" rx="12" class="p"/>
+      <rect x="474" y="80" width="130" height="100" rx="12" class="f"/>
+      ${svgText(101, 136, "Condición", 15)}
+      ${svgText(247, 136, "Criterio", 15)}
+      ${svgText(393, 136, "Causa", 15)}
+      ${svgText(539, 136, "Efecto", 15)}`;
+  } else if (kind === "lineas") {
+    body = `${common}
+      <rect x="70" y="40" width="500" height="52" rx="10" class="f"/>
+      <rect x="70" y="108" width="500" height="52" rx="10" class="p"/>
+      <rect x="70" y="176" width="500" height="52" rx="10" class="a"/>
+      ${svgText(320, 72, "1 · Procesos", 16)}
+      ${svgText(320, 140, "2 · Contraloría", 16)}
+      ${svgText(320, 208, "3 · Auditoría interna", 16)}`;
+  } else if (kind === "matriz") {
+    body = `${common}
+      <rect x="90" y="40" width="460" height="200" rx="12" class="p"/>
+      <path d="M90 100 H550 M90 160 H550 M250 40 V240 M400 40 V240" class="s"/>
+      ${svgText(170, 78, "Bajo", 16)}
+      ${svgText(325, 78, "Medio", 16)}
+      ${svgText(475, 78, "Alto", 16)}
+      ${svgText(320, 268, "Probabilidad × impacto", 15)}`;
+  } else if (kind === "cierre") {
+    body = `${common}
+      <rect x="180" y="36" width="280" height="210" rx="16" class="p"/>
+      <path d="M214 92 H400 M214 140 H380 M214 188 H360" class="s"/>
+      <circle cx="250" cy="86" r="10" class="a"/>
+      <circle cx="250" cy="134" r="10" class="a"/>
+      <circle cx="250" cy="182" r="10" class="f"/>
+      ${svgText(320, 268, "Antes de opinar", 16)}`;
+  } else if (kind === "eficacia") {
+    body = `${common}
+      <rect x="48" y="56" width="150" height="150" rx="12" class="f"/>
+      <rect x="214" y="56" width="180" height="150" rx="12" class="p"/>
+      <rect x="410" y="56" width="180" height="150" rx="12" class="f"/>
+      ${svgText(123, 136, "Prueba", 16)}
+      ${svgText(304, 136, "Muestra", 16)}
+      ${svgText(500, 136, "Conclusión", 16)}`;
+  } else if (kind === "asientos") {
+    body = `${common}
+      <rect x="48" y="48" width="250" height="180" rx="14" class="p"/>
+      <rect x="342" y="48" width="250" height="180" rx="14" class="f"/>
+      <path d="M78 110 H268 M78 150 H240" class="s"/>
+      <path d="M372 110 H562 M372 150 H520" class="s"/>
+      ${svgText(173, 80, "Ajuste", 16)}
+      ${svgText(467, 80, "Reclasificar", 16)}
+      ${svgText(173, 200, "Real y resultado", 14)}
+      ${svgText(467, 200, "Mismo estado", 14)}`;
+  } else if (kind === "tendencia") {
+    body = `${common}
+      <path d="M70 210 H570 M70 210 V40" class="s"/>
+      <path d="M90 170 L180 150 L270 120 L360 140 L460 70 L550 90" class="s" stroke="var(--accent)" stroke-width="4"/>
+      <circle cx="460" cy="70" r="8" class="a"/>
+      ${svgText(320, 252, "Año anterior y año actual", 16)}`;
+  }
+  return `<figure class="fig"><svg viewBox="0 0 640 280" role="img" aria-label="${esc(alt)}">${body}</svg><figcaption>Ilustración original de esta lección.</figcaption></figure>`;
+}
+function blocksHtml(blocks) {
+  return blocks.map((b) => {
+    if (b.t === "p") return `<p>${esc(b.v)}</p>`;
+    if (b.t === "h") return `<h3>${esc(b.v)}</h3>`;
+    if (b.t === "note") return `<aside class="note">${esc(b.v)}</aside>`;
+    if (b.t === "ul") return `<ul>${b.v.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`;
+    return "";
+  }).join("");
+}
+function pct(id) {
+  const n = LESSONS[id].modules.length;
+  const d = Object.keys(state.readings[id].modules).length;
+  return { n, d, w: Math.round((d / n) * 100) };
+}
+function quizScore(id) {
+  const qz = state.readings[id].quiz;
+  if (!qz || !qz.done) return null;
+  return qz.score;
+}
+function renderHome() {
+  const cards = ORDER.map((id) => {
+    const L = LESSONS[id];
+    const p = pct(id);
+    const sc = quizScore(id);
+    return `<button class="card" type="button" data-act="reading" data-id="${id}">
+      <span class="kicker">${esc(L.n)}</span>
+      <b>${esc(L.title)}</b>
+      <span class="meta">${esc(L.blurb)}</span>
+      <span class="meta">${p.d} de ${p.n} módulos · Quiz: ${sc === null ? "sin intentar" : sc + " de 10"}</span>
+      <span class="bar" aria-hidden="true"><span style="width:${p.w}%"></span></span>
+    </button>`;
+  }).join("");
+  return `<p class="kicker">Auditoría especializada</p>
+    <h1 class="cover-prof">Profesor Sergio Tertusio</h1>
+    <p class="lede">Conclusiones del trabajo de auditoría</p>
+    <p class="muted">Tres lecturas de la unidad. Cada una tiene sus módulos, una actividad breve y un quiz de 10 preguntas. El avance de una no se mezcla con el de las otras.</p>
+    <div class="stack">${cards}</div>`;
+}
+function renderReading(id) {
+  const L = LESSONS[id];
+  const p = pct(id);
+  const mods = L.modules.map((m, i) => {
+    const done = !!state.readings[id].modules[i];
+    return `<button class="card" type="button" data-act="module" data-id="${id}" data-i="${i}">
+      <b>Módulo ${i + 1}. ${esc(m.title)}</b>
+      <span class="meta">${done ? "Actividad hecha" : "Pendiente"}</span>
+    </button>`;
+  }).join("");
+  const sc = quizScore(id);
+  return `<p class="kicker">${esc(L.n)} · ${p.d} de ${p.n} módulos</p>
+    <h2>${esc(L.title)}</h2>
+    ${illustration(L.cover, L.coverAlt)}
+    <p>${esc(L.aim)}</p>
+    <div class="stack">${mods}</div>
+    <div class="row">
+      <button class="btn primary" type="button" data-act="quiz" data-id="${id}">Quiz de 10 preguntas${sc === null ? "" : " · último: " + sc + "/10"}</button>
+    </div>`;
+}
+function activityHtml(id, i) {
+  const act = LESSONS[id].modules[i].activity;
+  const work = ensureWork(id, i);
+  if (act.type === "classify") {
+    const items = act.items.map((it) => {
+      const pick = work.picks[it.id];
+      let cls = "item";
+      if (work.done) cls += pick === it.bucket ? " good" : " bad";
+      const buttons = act.buckets.map((b) => {
+        const on = pick === b ? " primary" : "";
+        return `<button class="btn${on}" type="button" data-act="bucket" data-id="${id}" data-i="${i}" data-item="${it.id}" data-bucket="${esc(b)}" ${work.done ? "disabled" : ""}>${esc(b)}</button>`;
+      }).join("");
+      const fix = work.done && pick !== it.bucket ? `<p class="meta">En la lectura: ${esc(it.bucket)}.</p>` : "";
+      return `<div class="${cls}"><p>${esc(it.text)}</p><div class="row">${buttons}</div>${fix}</div>`;
+    }).join("");
+    const fb = work.done ? `<div class="fb ${work.ok ? "good" : "bad"}"><strong>${work.ok ? "Correcto." : "Revisa las marcadas."}</strong> ${esc(act.why)}</div>` : "";
+    const check = work.done ? "" : `<button class="btn primary" type="button" data-act="check" data-id="${id}" data-i="${i}">Comprobar</button>`;
+    return `<h3>Actividad</h3><p>${esc(act.prompt)}</p>${items}${check}${fb}`;
+  }
+  if (act.type === "match") {
+    const rows = act.pairs.map((pair, idx) => {
+      const opts = work.order.map((oi) => `<option value="${oi}" ${String(work.picks[idx]) === String(oi) ? "selected" : ""}>${esc(act.pairs[oi][1])}</option>`).join("");
+      let cls = "item";
+      if (work.done) cls += String(work.picks[idx]) === String(idx) ? " good" : " bad";
+      const fix = work.done && String(work.picks[idx]) !== String(idx) ? `<p class="meta">En la lectura: ${esc(pair[1])}</p>` : "";
+      return `<div class="${cls}"><p><strong>${esc(pair[0])}</strong></p>
+        <select class="pick" data-act="match" data-id="${id}" data-i="${i}" data-left="${idx}" ${work.done ? "disabled" : ""}>
+          <option value="">Elige…</option>${opts}
+        </select>${fix}</div>`;
+    }).join("");
+    const fb = work.done ? `<div class="fb ${work.ok ? "good" : "bad"}"><strong>${work.ok ? "Correcto." : "Hay pares que no coinciden."}</strong> ${esc(act.why)}</div>` : "";
+    const check = work.done ? "" : `<button class="btn primary" type="button" data-act="check" data-id="${id}" data-i="${i}">Comprobar</button>`;
+    return `<h3>Actividad</h3><p>${esc(act.prompt)}</p>${rows}${check}${fb}`;
+  }
+  const opts = act.options.map((op, idx) => {
+    let cls = "opt";
+    const picked = work.picks.choice;
+    if (work.done) {
+      if (op.ok) cls += " good";
+      else if (picked === idx) cls += " bad";
+    }
+    return `<button class="${cls}" type="button" data-act="scenario" data-id="${id}" data-i="${i}" data-choice="${idx}" ${work.done ? "disabled" : ""}>${esc(op.text)}</button>`;
+  }).join("");
+  const fb = work.done ? `<div class="fb ${work.ok ? "good" : "bad"}"><strong>${work.ok ? "Correcto." : "No es esa."}</strong> ${esc(act.why)}</div>` : "";
+  return `<h3>Actividad</h3><p>${esc(act.prompt)}</p>${opts}${fb}`;
+}
+function ensureWork(id, i) {
+  const slot = state.readings[id];
+  if (!slot.work[i]) {
+    const act = LESSONS[id].modules[i].activity;
+    let order = null;
+    if (act.type === "match") {
+      order = act.pairs.map((_, idx) => idx);
+      for (let k = order.length - 1; k > 0; k--) {
+        const j = Math.floor(Math.random() * (k + 1));
+        const tmp = order[k]; order[k] = order[j]; order[j] = tmp;
+      }
+    }
+    slot.work[i] = { picks: {}, done: false, ok: false, order };
+    save();
+  }
+  return slot.work[i];
+}
+function renderModule(id, i) {
+  const L = LESSONS[id];
+  const m = L.modules[i];
+  const last = i === L.modules.length - 1;
+  const done = !!state.readings[id].modules[i];
+  return `<p class="kicker">${esc(L.n)} · Módulo ${i + 1} de ${L.modules.length}</p>
+    <h2>${esc(m.title)}</h2>
+    ${illustration(m.image, m.alt)}
+    ${blocksHtml(m.blocks)}
+    ${activityHtml(id, i)}
+    <div class="row">
+      <button class="btn" type="button" data-act="reading" data-id="${id}">Volver a la lectura</button>
+      ${done && !last ? `<button class="btn primary" type="button" data-act="module" data-id="${id}" data-i="${i + 1}">Siguiente módulo</button>` : ""}
+      ${done && last ? `<button class="btn primary" type="button" data-act="quiz" data-id="${id}">Ir al quiz</button>` : ""}
+    </div>`;
+}
+function ensureQuiz(id) {
+  if (!state.readings[id].quiz) {
+    state.readings[id].quiz = { step: 0, picks: {}, done: false, score: 0 };
+    save();
+  }
+  return state.readings[id].quiz;
+}
+function renderQuiz(id) {
+  const L = LESSONS[id];
+  const qz = ensureQuiz(id);
+  if (qz.done) {
+    const misses = L.quiz.map((q, i) => {
+      if (qz.picks[i] === q.a) return "";
+      return `<li class="miss"><strong>${esc(q.q)}</strong><br>${esc(q.why)}</li>`;
+    }).join("");
+    const note = qz.score >= 9 ? "Comprensión sólida de esta lectura." : qz.score >= 7 ? "Buen dominio. Conviene releer lo que falló." : "Vuelve a los módulos de esta lectura y reintenta.";
+    return `<p class="kicker">${esc(L.n)} · Quiz</p><h2>Resultado</h2>
+      <p class="score">${qz.score} de 10</p>
+      <p>${note} Este puntaje es solo de esta lectura.</p>
+      ${misses ? `<h3>Para repasar</h3><ul>${misses}</ul>` : `<p>Respondiste bien las diez.</p>`}
+      <div class="row">
+        <button class="btn primary" type="button" data-act="retry" data-id="${id}">Reintentar</button>
+        <button class="btn" type="button" data-act="reading" data-id="${id}">Volver a la lectura</button>
+      </div>`;
+  }
+  const q = L.quiz[qz.step];
+  const picked = qz.picks[qz.step];
+  const opts = q.options.map((op, idx) => {
+    let cls = "opt";
+    if (picked !== undefined) {
+      if (idx === q.a) cls += " good";
+      else if (idx === picked) cls += " bad";
+    }
+    return `<button class="${cls}" type="button" data-act="quiz-opt" data-id="${id}" data-choice="${idx}" ${picked !== undefined ? "disabled" : ""}>${esc(op)}</button>`;
+  }).join("");
+  const fb = picked === undefined ? "" : `<div class="fb ${picked === q.a ? "good" : "bad"}"><strong>${picked === q.a ? "Correcto." : "No es esa."}</strong> ${esc(q.why)}</div>`;
+  const next = picked === undefined ? "" : `<button class="btn primary" type="button" data-act="quiz-next" data-id="${id}">${qz.step === 9 ? "Ver resultado" : "Siguiente"}</button>`;
+  return `<p class="kicker">${esc(L.n)} · Pregunta ${qz.step + 1} de 10</p>
+    <h2>${esc(q.q)}</h2>
+    ${opts}${fb}
+    <div class="row">${next}<button class="btn" type="button" data-act="reading" data-id="${id}">Salir al índice</button></div>`;
+}
+function render() {
+  applyTheme();
+  const v = state.view;
+  let html = "";
+  if (v.name === "reading" && LESSONS[v.id]) html = renderReading(v.id);
+  else if (v.name === "module" && LESSONS[v.id] && LESSONS[v.id].modules[v.i]) html = renderModule(v.id, v.i);
+  else if (v.name === "quiz" && LESSONS[v.id]) html = renderQuiz(v.id);
+  else html = renderHome();
+  if (state.confirm) {
+    html += `<div class="modal"><div class="dialog" role="dialog" aria-modal="true">
+      <h2>Reiniciar avance</h2>
+      <p>Se borra el avance de las tres lecturas, actividades y quizzes. El modo claro u oscuro se conserva.</p>
+      <div class="row">
+        <button class="btn primary" type="button" data-act="reset-yes">Sí, borrar avance</button>
+        <button class="btn" type="button" data-act="reset-no">Cancelar</button>
+      </div>
+    </div></div>`;
+  }
+  document.getElementById("app").innerHTML = html;
+}
+function go(view) {
+  state.view = view;
+  state.confirm = false;
+  save();
+  render();
+  window.scrollTo(0, 0);
+}
+document.body.addEventListener("click", (ev) => {
+  const el = ev.target.closest("[data-act]");
+  if (!el) return;
+  const act = el.dataset.act;
+  const id = el.dataset.id;
+  if (act === "home") return go({ name: "home" });
+  if (act === "theme") {
+    state.theme = state.theme === "dark" ? "light" : "dark";
+    save();
+    applyTheme();
+    return;
+  }
+  if (act === "reset") { state.confirm = true; render(); return; }
+  if (act === "reset-no") { state.confirm = false; render(); return; }
+  if (act === "reset-yes") {
+    const theme = state.theme;
+    state = fresh();
+    state.theme = theme;
+    save();
+    render();
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (act === "reading") return go({ name: "reading", id });
+  if (act === "module") return go({ name: "module", id, i: Number(el.dataset.i) });
+  if (act === "quiz") return go({ name: "quiz", id });
+  if (act === "bucket") {
+    const i = Number(el.dataset.i);
+    const work = ensureWork(id, i);
+    if (work.done) return;
+    work.picks[el.dataset.item] = el.dataset.bucket;
+    save();
+    render();
+    return;
+  }
+  if (act === "check") {
+    const i = Number(el.dataset.i);
+    const mod = LESSONS[id].modules[i];
+    const work = ensureWork(id, i);
+    if (work.done) return;
+    if (mod.activity.type === "classify") {
+      const pending = mod.activity.items.some((it) => !work.picks[it.id]);
+      if (pending) { alert("Clasifica todas las ideas antes de comprobar."); return; }
+      work.ok = mod.activity.items.every((it) => work.picks[it.id] === it.bucket);
+    } else if (mod.activity.type === "match") {
+      const pending = mod.activity.pairs.some((_, idx) => work.picks[idx] === undefined || work.picks[idx] === "");
+      if (pending) { alert("Completa todos los pares antes de comprobar."); return; }
+      work.ok = mod.activity.pairs.every((_, idx) => String(work.picks[idx]) === String(idx));
+    }
+    work.done = true;
+    state.readings[id].modules[i] = true;
+    save();
+    render();
+    return;
+  }
+  if (act === "scenario") {
+    const i = Number(el.dataset.i);
+    const work = ensureWork(id, i);
+    if (work.done) return;
+    const choice = Number(el.dataset.choice);
+    work.picks.choice = choice;
+    work.ok = !!LESSONS[id].modules[i].activity.options[choice].ok;
+    work.done = true;
+    state.readings[id].modules[i] = true;
+    save();
+    render();
+    return;
+  }
+  if (act === "quiz-opt") {
+    const qz = ensureQuiz(id);
+    if (qz.done || qz.picks[qz.step] !== undefined) return;
+    qz.picks[qz.step] = Number(el.dataset.choice);
+    save();
+    render();
+    return;
+  }
+  if (act === "quiz-next") {
+    const qz = ensureQuiz(id);
+    if (qz.picks[qz.step] === undefined) return;
+    if (qz.step < 9) qz.step += 1;
+    else {
+      qz.done = true;
+      qz.score = LESSONS[id].quiz.reduce((s, q, i) => s + (qz.picks[i] === q.a ? 1 : 0), 0);
+    }
+    save();
+    render();
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (act === "retry") {
+    state.readings[id].quiz = { step: 0, picks: {}, done: false, score: 0 };
+    save();
+    render();
+    window.scrollTo(0, 0);
+  }
+});
+document.getElementById("app").addEventListener("change", (ev) => {
+  const el = ev.target.closest("[data-act='match']");
+  if (!el) return;
+  const id = el.dataset.id;
+  const i = Number(el.dataset.i);
+  const work = ensureWork(id, i);
+  if (work.done) return;
+  work.picks[el.dataset.left] = el.value;
+  save();
+});
+load();
+if (!state.view || !state.view.name) state.view = { name: "home" };
+render();
+</script>
+</body>
+</html>
